@@ -1,6 +1,6 @@
 {
   "name": "@reggi/node-generate",
-  "version": "0.0.4",
+  "version": "0.0.3",
   "description": "This is a starter project for TypeScript and Node.js",
   "license": "ISC",
   "author": "Thomas Reggi",
