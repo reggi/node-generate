@@ -34,8 +34,15 @@ jobs:
       with:
         # You can specify specifying version range for the extra plugins if you prefer.
         extra_plugins: |
+          @semantic-release/npm
           @semantic-release/changelog@3.0.0
           @semantic-release/git
+          @semantic-release/github
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+    - name: Commit Version
+      run: |
+        git config --global user.name 'reggi'
+        git config --global user.email 'thomas@reggi.com'
+        git push
