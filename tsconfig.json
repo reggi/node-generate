@@ -1,5 +1,11 @@
 {
-  "compilerOptions":  {
-    "types": ["node", "mocha"]
-  }
+  "extends": "./node_modules/gts/tsconfig-google.json",
+  "compilerOptions": {
+    "types": ["node", "mocha"],
+    "rootDir": ".",
+    "outDir": "build"
+  },
+  "include": [
+    "src/**/*.ts"
+  ]
 }

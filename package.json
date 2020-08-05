@@ -10,6 +10,8 @@
     "@types/node": "^14.0.22",
     "@types/sinon": "^9.0.4",
     "chai": "^4.2.0",
+    "eslint-plugin-mocha": "^7.0.1",
+    "gts": "^2.0.2",
     "mocha": "^8.0.1",
     "nyc": "^15.1.0",
     "sinon": "^9.0.2",
@@ -18,10 +20,16 @@
     "typescript": "^3.9.6"
   },
   "scripts": {
-    "test": "find ./modules -name '*_test.ts' | xargs ts-mocha -R spec",
+    "test": "find ./src -name '*_test.ts' | xargs ts-mocha -R spec",
     "test:coverage": "nyc --reporter=html --reporter=text --reporter=text-summary npm test",
     "coverage:open": "open ./coverage/index.html",
     "ts-node": "ts-node",
-    "ts-mocha": "ts-mocha"
+    "ts-mocha": "ts-mocha",
+    "lint:check": "gts check",
+    "lint:fix": "gts fix",
+    "posttest": "npm run lint:check"
+  },
+  "dependencies": {
+    "@types/chai": "^4.2.12"
   }
 }
