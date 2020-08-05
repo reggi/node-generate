@@ -3,3 +3,9 @@ src
 .prettierrc.js
 .vscode
 tsconfig.json
+.nyc_output
+coverage
+.nycrc.json
+.releaserc
+.DS_Store
+.github
