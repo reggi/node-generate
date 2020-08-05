@@ -1,8 +1,5 @@
 {
   "extends": "./node_modules/gts/",
-  "plugins": [
-    "mocha"
-  ],
   "env": {
     "mocha": true
   }
