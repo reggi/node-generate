@@ -1,11 +1,10 @@
 {
   "name": "@reggi/node-generate",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "This is a starter project for TypeScript and Node.js",
   "license": "ISC",
   "author": "Thomas Reggi",
   "main": "./build/mod.js",
-  "public": true,
   "scripts": {
     "build": "rm -rf ./build/ && tsc",
     "coverage:open": "open ./coverage/index.html",
@@ -16,7 +15,8 @@
     "posttest": "npm run lint:check",
     "test:coverage": "nyc --reporter=html --reporter=text --reporter=text-summary npm test",
     "ts-mocha": "ts-mocha",
-    "ts-node": "ts-node"
+    "ts-node": "ts-node",
+    "semantic-release": "semantic-release"
   },
   "devDependencies": {
     "@types/chai": "^4.2.12",
@@ -31,6 +31,11 @@
     "sinon": "^9.0.2",
     "ts-mocha": "^7.0.0",
     "ts-node": "^8.10.2",
-    "typescript": "^3.9.6"
+    "typescript": "^3.9.6",
+    "semantic-release": "^17.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reggi/node-generate.git"
   }
 }
