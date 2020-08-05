@@ -2,10 +2,23 @@
   "name": "@reggi/node-generate",
   "version": "0.0.1",
   "description": "This is a starter project for TypeScript and Node.js",
-  "main": "./index.js",
-  "author": "Thomas Reggi",
   "license": "ISC",
+  "author": "Thomas Reggi",
+  "main": "./build/mod.js",
+  "scripts": {
+    "build": "rm -rf ./build/ && tsc",
+    "coverage:open": "open ./coverage/index.html",
+    "lint:check": "gts check",
+    "lint:fix": "gts fix",
+    "sortme": "npx sort-package-json",
+    "test": "find ./src -name '*_test.ts' | xargs ts-mocha -R spec",
+    "posttest": "npm run lint:check",
+    "test:coverage": "nyc --reporter=html --reporter=text --reporter=text-summary npm test",
+    "ts-mocha": "ts-mocha",
+    "ts-node": "ts-node"
+  },
   "devDependencies": {
+    "@types/chai": "^4.2.12",
     "@types/mocha": "^8.0.0",
     "@types/node": "^14.0.22",
     "@types/sinon": "^9.0.4",
@@ -18,18 +31,5 @@
     "ts-mocha": "^7.0.0",
     "ts-node": "^8.10.2",
     "typescript": "^3.9.6"
-  },
-  "scripts": {
-    "test": "find ./src -name '*_test.ts' | xargs ts-mocha -R spec",
-    "test:coverage": "nyc --reporter=html --reporter=text --reporter=text-summary npm test",
-    "coverage:open": "open ./coverage/index.html",
-    "ts-node": "ts-node",
-    "ts-mocha": "ts-mocha",
-    "lint:check": "gts check",
-    "lint:fix": "gts fix",
-    "posttest": "npm run lint:check"
-  },
-  "dependencies": {
-    "@types/chai": "^4.2.12"
   }
 }

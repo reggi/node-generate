@@ -2,10 +2,13 @@
   "extends": "./node_modules/gts/tsconfig-google.json",
   "compilerOptions": {
     "types": ["node", "mocha"],
-    "rootDir": ".",
+    "rootDir": "./src",
     "outDir": "build"
   },
   "include": [
-    "src/**/*.ts"
+    "src/**/*.ts",
+  ],
+  "exclude": [
+    "src/**/*_test.ts"
   ]
 }
