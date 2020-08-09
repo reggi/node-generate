@@ -14,7 +14,7 @@ node-generate
 ## Use directly via `npx`
 
 ```
-npx -p @reggi/node-generate
+npx @reggi/node-generate
 ```
 
 <!-- anything below this line will be safe from template removal -->
