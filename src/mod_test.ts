@@ -1,8 +1,9 @@
-import {expect} from 'chai';
-import {example} from './mod';
+import {Generate} from './mod';
 
-describe('example', () => {
-  it('should test example', () => {
-    expect(example()).to.equal(true);
+describe('Generate', () => {
+  context('.cli()', () => {
+    it('should test cli', async () => {
+      await Generate.cli(process);
+    });
   });
 });

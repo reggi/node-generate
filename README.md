@@ -1,11 +1,20 @@
 # node-generate
 
+[![semantic release](https://github.com/reggi/node-generate/workflows/semantic%20release/badge.svg)](https://github.com/reggi/node-generate/actions?query=workflow%3A%22semantic+release%22) [![coverage](https://github.com/reggi/node-generate/workflows/coverage/badge.svg)](https://reggi.github.io/node-generate/) [![npm](https://badge.fury.io/js/@reggi/node-generate.svg)](https://www.npmjs.com/package/@reggi/node-generate)
+
 This is a starter project for TypeScript and Node.js
 
-* [x] TypeScript
-* [x] Mocha / Chai / Sinon
-* [x] https://github.com/google/gts
-  * [x] Prettier
-  * [x] eslint
-* [x] Uses `mod.ts` convention from deno
-* [x] Uses `mod_test.ts` convention from deno
+## Install
+
+```
+npm install @reggi/node-generate -g
+node-generate
+```
+
+## Use directly via `npx`
+
+```
+npx -p @reggi/node-generate
+```
+
+<!-- anything below this line will be safe from template removal -->
