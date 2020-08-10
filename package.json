@@ -23,6 +23,7 @@
     "test:coverage": "npm run test:coverage-html && npm run open:coverage",
     "test:coverage-ci": "nyc npm test",
     "test:coverage-html": "nyc --reporter=html npm test",
+    "test:update-snap": "CHAI_JEST_SNAPSHOT_UPDATE_ALL=true npm run test",
     "ts-node": "ts-node"
   },
   "devDependencies": {
